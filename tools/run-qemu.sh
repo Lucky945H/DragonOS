@@ -143,6 +143,10 @@ QEMU_ACCEL_ARGS=()
 QEMU_DEVICE_ARGS=()
 QEMU_DISPLAY_ARGS=()
 QEMU_ARGS=()
+
+QEMU_ARGS+=(  -machine acpi=on
+  -acpitable on
+)
 # QEMU_ARGUMENT+=" -S "
 
 if [ -f "${QEMU_EXT4_DISK_IMAGE}" ]; then
@@ -155,7 +159,7 @@ fi
 check_dependencies
 
 # 设置无图形界面模式
-QEMU_NOGRAPHIC=false
+QEMU_NOGRAPHIC=true
 
 KERNEL_CMDLINE=" "
 

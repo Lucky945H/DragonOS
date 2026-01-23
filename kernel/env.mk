@@ -4,7 +4,7 @@ include ../env.mk
 ifeq ($(USING_DRAGONOS_NIX_ENV),1) # Nix toolchain doesn't need to specify the prefix
 CCPREFIX=
 else ifeq ($(ARCH), x86_64)
-CCPREFIX=x86_64-linux-gnu-
+CCPREFIX=
 else ifeq ($(ARCH), riscv64)
 CCPREFIX=riscv64-linux-gnu-
 else ifeq ($(ARCH), loongarch64)

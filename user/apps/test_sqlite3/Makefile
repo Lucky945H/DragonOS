@@ -10,7 +10,7 @@ CC=$(CROSS_COMPILE)gcc
 
 .PHONY: all
 all: main.c $(SQLITE3_DIR)/sqlite3.c
-	$(CC) -I $(SQLITE3_DIR) -static -o test_sqlite3 main.c $(SQLITE3_DIR)/sqlite3.c
+	$(CC) -I $(SQLITE3_DIR) -static -o test_sqlite3 main.c $(SQLITE3_DIR)/sqlite3.c -lc -lm -lpthread -ldl 
 
 .PHONY: install clean download_sqlite3 __download_sqlite3
 install: all

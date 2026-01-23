@@ -32,7 +32,7 @@ export LD=ld
 export AS=as
 export NM=nm
 export OBJCOPY=objcopy
-
+export CFLAGS="-std=gnu11":$CFLAGS
 
 #检测grub是否已经安装
 if [ -d ${grub_dir_i386_efi}/bin ] && [ -d ${grub_dir_i386_legacy}/bin ] && [ -d ${grub_dir_x86_64_efi}/bin ] ; then
